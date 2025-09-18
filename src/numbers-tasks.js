@@ -234,8 +234,12 @@ function isPrime(n) {
  *   toNumber(42, 0) => 42
  *   toNumber(new Number(42), 0) => 42
  */
-function toNumber(/* value, def */) {
-  throw new Error('Not implemented');
+function toNumber(value, def) {
+  const result = parseInt(value, 10);
+  if (result) {
+    return result;
+  }
+  return def;
 }
 
 /**
